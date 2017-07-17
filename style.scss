@@ -1,0 +1,121 @@
+@import "compass";
+
+body {
+    min-width: 320px;
+}
+
+//フォント
+
+html{
+    font-size: 70%;
+}
+
+#maincontents h1, #application h1{
+    font-size: 2rem;
+    display: block;
+    }
+    
+#contentsbox h2{
+    font-size: 1.2rem;
+}
+
+.textcenter{
+    text-align:center;
+}
+
+//ヘッダー画像の調整
+
+#mainimage{
+background-image: url("./images/kazoku_party.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+//BOX
+
+#maincontents{
+    padding: 20px 0px;
+}
+
+#wrapper{
+    width: 90%;
+    margin-left :auto;
+    margin-right :auto;
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+}
+
+//カラム落としの時の横幅
+
+.contentsbox{
+    @include box-sizing(border-box);
+    width: 90%; 
+    border: 1px solid #0000ff;
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+//申し込み
+
+
+#application{
+    background-color: #EEEEEE;
+    padding: 20px 0px;
+    }
+
+#button{
+    display: block;
+    width: 80%;
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #66FF66;
+    border-radius: 5px;
+}
+
+
+//デスクトップ
+
+@media (min-width: 769px) {
+    #wrapper{
+        width: 90%;
+        margin-left :auto;
+        margin-right :auto;
+        @include display-flex;
+        justify-content: space-between;
+        @include flex-direction(row);
+    }
+    .contentsbox{
+        @include box-sizing(border-box);
+        width: 33%;
+        border: 1px solid #0000ff;
+        margin: 0px 5px;
+        padding: 5px;
+    }
+    #mainimage{
+    background-image: url("./images/kazoku_party.jpg");
+      height: 500px;
+      width: 100%;
+      background-size: cover;
+      background-position: center center;
+    }
+    #buttton{
+        display: block;
+        width: 50%;
+        height: 3rem;
+        font-weight: bold;
+        margin: auto;
+        padding: 5px 0;
+        text-align: center;
+        background-color: #66FF66;
+        border-radius: 5px;
+    }
+}
+
+
